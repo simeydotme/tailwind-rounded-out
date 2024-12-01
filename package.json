@@ -1,0 +1,59 @@
+{
+  "name": "tailwind-rounded-out",
+  "version": "1.0.0",
+  "description": "Tailwind CSS plugin for outer-rounded corners with background inheritance",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "tsup",
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:vite --host\"",
+    "dev:css": "tailwindcss -i ./playground/styles/input.css -o ./playground/styles/output.css --watch",
+    "dev:vite": "vite playground --host",
+    "prepublishOnly": "npm run build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "tailwindcss",
+    "plugin",
+    "rounded",
+    "border-radius",
+    "outer-radius",
+    "css"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/tailwind-rounded-out.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/tailwind-rounded-out/issues"
+  },
+  "homepage": "https://github.com/yourusername/tailwind-rounded-out#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.0",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.19.5",
+    "jest": "^29.7.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "ts-jest": "^29.1.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vitepress": "1.0.0-rc.29"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.3.5"
+  }
+}
