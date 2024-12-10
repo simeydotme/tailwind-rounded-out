@@ -86,8 +86,8 @@
 <body class="bg-gray-100 min-h-screen p-8">
     <div class="max-w-4xl mx-auto space-y-8">
         <!-- All Sides -->
-        <section class="bg-white p-6 rounded-lg shadow">
-            <h2 class="text-2xl font-bold mb-4">All Sides Rounded Out</h2>
+        <section class="bg-white p-6 rounded-lg shadow flex flex-col gap-4">
+            <h2 class="text-2xl font-bold">Default Rounded Out</h2>
             <div class="space-y-4">
                 <div class="bg-blue-500 text-white p-4 relative rounded-out">Default</div>
                 <div class="bg-blue-500 text-white p-4 relative rounded-out-sm">Small (sm)</div>
@@ -97,6 +97,23 @@
                 <div class="bg-blue-500 text-white p-4 relative rounded-out-2xl">2XL</div>
                 <div class="bg-blue-500 text-white p-4 relative rounded-out-3xl">3XL</div>
             </div>
+            <p>Notice that only the bottom corners are rounded out, this is because there's only two psuedo elements
+                available to create the corners. If you want to round out all sides, you can nest the element
+                <code class="bg-slate-200 rounded px-1 py-1 text-fuchsia-600">rounded-out-lg</code> inside another <code class="bg-slate-200 rounded px-1 py-1 text-fuchsia-600">rounded-out-lg</code> element:
+            </p>
+            <pre class="pl-10"><code class="language-html">&lt;div class="rounded-out-lg"&gt;
+    &lt;div class="rounded-out-lg"&gt;
+        Outer rounded corners!
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <div class="bg-blue-500 text-white relative rounded-out-t-xl">
+            <div class="p-4 bg-inherit rounded-out-b-xl">
+                Outer rounded corners!<br>
+                <small>Not sure why you'd want to do this, but it's possible</small>
+            </div>
+        </div>
+            
         </section>
 
         <!-- Top Variants -->

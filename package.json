@@ -15,10 +15,7 @@
     "dev": "concurrently \"npm run dev:css\" \"npm run dev:vite --host\"",
     "dev:css": "tailwindcss -i ./playground/styles/input.css -o ./playground/styles/output.css --watch",
     "dev:vite": "vite playground --host",
-    "prepublishOnly": "npm run build",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "tailwindcss",
@@ -50,8 +47,7 @@
     "ts-jest": "^29.1.1",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
-    "vite": "^4.5.0",
-    "vitepress": "1.0.0-rc.29"
+    "vite": "^4.5.0"
   },
   "peerDependencies": {
     "tailwindcss": "^3.3.5"

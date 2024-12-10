@@ -1,11 +1,11 @@
 # Tailwind Rounded Out
 
-A Tailwind CSS plugin that adds "outside" rounded corners to elements - similar to folder tabs or protruding cards. The plugin maintains background color/image inheritance while providing a wide range of customization options.
+A Tailwind CSS plugin that adds _**"outside" rounded corners**_ to elements 
 
-[Demo Site - Coming Soon]
+<small>Similar to folder tabs or protruding cards. The plugin maintains background color/image inheritance while providing a wide range of customization options.</small>
 
 <div align="center">
-  <!-- Consider adding a screenshot or GIF here showing key examples -->
+  <img src="docs/images/readme-example.png" alt="Demo of the plugin">
 </div>
 
 ## Features
@@ -41,6 +41,7 @@ module.exports = {
   plugins: [require("tailwind-rounded-out")],
 };
 ```
+<small>note: if you don't supply custom sizes, the plugin will use the same values from either the `theme.borderRadius` or the default theme sizes</small> <
 
 ## Basic Usage
 
@@ -147,3 +148,12 @@ This plugin uses CSS `::before` and `::after` pseudo-elements to create the roun
 ## License
 
 MIT License - See [LICENSE](LICENSE) file for details
+
+
+## More Examples
+
+#### Backgrounds are able to show through, no fake backgrounds.
+<img src="docs/images/readme-example2.png" alt="Demo of the plugin">
+
+#### A range of corner variations
+<img src="docs/images/readme-example3.png" alt="Demo of the plugin">
