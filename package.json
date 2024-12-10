@@ -1,6 +1,6 @@
 {
   "name": "tailwind-rounded-out",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tailwind CSS plugin for outer-rounded corners with background inheritance",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -29,12 +29,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/tailwind-rounded-out.git"
+    "url": "git+https://github.com/simeydotme/tailwind-rounded-out.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/tailwind-rounded-out/issues"
+    "url": "https://github.com/simeydotme/tailwind-rounded-out/issues"
   },
-  "homepage": "https://github.com/yourusername/tailwind-rounded-out#readme",
+  "homepage": "https://github.com/simeydotme/tailwind-rounded-out#readme",
   "devDependencies": {
     "@types/jest": "^29.5.8",
     "@types/node": "^20.9.0",
