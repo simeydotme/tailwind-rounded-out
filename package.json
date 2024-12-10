@@ -1,6 +1,6 @@
 {
   "name": "tailwind-rounded-out",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Tailwind CSS plugin for outer-rounded corners with background inheritance",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
