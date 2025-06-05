@@ -41,7 +41,7 @@ module.exports = {
   plugins: [require("tailwind-rounded-out")],
 };
 ```
-<small>note: if you don't supply custom sizes, the plugin will use the same values from either the `theme.borderRadius` or the default theme sizes</small> <
+<sub>note: if you don't supply custom sizes, the plugin will use the same values from either the `theme.borderRadius` or the default theme sizes</sub>
 
 ## Basic Usage
 
