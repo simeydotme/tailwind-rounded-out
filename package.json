@@ -44,6 +44,7 @@
     "build": "cp src/index.css dist/index.css",
     "postbuild": "npm run build:astro",
     "build:astro": "cd demo && npm run build",
-    "prepublishOnly": "npm run build && npm run build:astro"
+    "prepublishOnly": "npm run build && npm run build:astro",
+    "dev": "cd demo && npm run dev"
   }
 }
