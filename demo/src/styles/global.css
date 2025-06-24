@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "../../../dist/index.css";
+
+
+.astro-code {
+  @apply p-4 rounded-lg;
+}
+
+hr {
+  @apply my-8 lg:-mx-4 h-px w-auto border-none bg-slate-300;
+}

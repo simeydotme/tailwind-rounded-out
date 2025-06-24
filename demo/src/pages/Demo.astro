@@ -1,0 +1,502 @@
+---
+import { Code } from 'astro:components';
+import "../styles/global.css";
+---
+
+<div id="container">
+  <main class="py-10">
+
+    <header class="max-w-4xl mx-auto my-8">
+      <h1 class="text-4xl font-bold px-4 lg:px-0">
+        Rounded-Out Tailwindcss Utility Demo
+      </h1>
+
+      <p class="text-lg px-4 lg:px-0 mt-2">
+        Here's a bunch of demos to show off the various features of the <code>rounded-out</code> utility.
+      </p>
+      
+    </header>
+
+    <div class="max-w-4xl mx-auto space-y-8 px-3 lg:px-0">
+      <!-- All Sides -->
+      <section class="bg-white p-8 rounded-lg shadow flex flex-col gap-4">
+        <h2 class="text-2xl font-bold">Default Rounded Out</h2>
+        <div class="space-y-6">
+          <div class="bg-blue-500 text-white p-4 relative rounded-out font-mono">rounded-out</div>
+          <div class="bg-blue-500 text-white p-4 relative rounded-out-sm font-mono">rounded-out-sm</div>
+          <div class="bg-blue-500 text-white p-4 relative rounded-out-md font-mono">rounded-out-md</div>
+          <div class="bg-blue-500 text-white p-4 relative rounded-out-lg font-mono">rounded-out-lg</div>
+          <div class="bg-blue-500 text-white p-4 relative rounded-out-xl font-mono">rounded-out-xl</div>
+          <div class="bg-blue-500 text-white p-4 relative rounded-out-2xl font-mono">rounded-out-2xl</div>
+          <div class="bg-blue-500 text-white p-4 relative rounded-out-3xl font-mono">rounded-out-3xl</div>
+        </div>
+
+        <p class="mt-4">
+          Notice that only the bottom corners are rounded out? This is because there's only two psuedo elements
+          available to create the corners. And we assume that the default use-case is to round out the bottom corners.
+        </p>
+
+        <hr />
+         
+        <h3 class="text-lg font-bold">Nesting</h3>
+        <p>If you want to round out <strong>all sides</strong>, you can nest the element
+          <code class="bg-slate-200 rounded px-1 py-1 text-fuchsia-600">rounded-out-lg</code> inside another <code
+            class="bg-slate-200 rounded px-1 py-1 text-fuchsia-600">rounded-out-lg</code
+          > element:
+        </p>
+
+        <Code lang="html" code={`<div class="rounded-out-lg">
+  <div class="rounded-out-lg">
+    Outer rounded corners!
+  </div>
+</div>
+`} />
+
+        <div class="bg-blue-500 text-white relative rounded-out-t-xl mt-4">
+          <div class="p-4 bg-inherit rounded-out-b-xl">
+            Outer rounded corners!<br />
+            <small>Not sure why you'd want to do this, but it's possible</small>
+          </div>
+        </div>
+
+        <p>Or imagine you want it to come in from each side;</p>
+
+        
+
+        <Code lang="html" code={`<div class="rounded-out-l-2xl">
+          <div class="rounded-out-r-2xl">
+            Outer rounded corners!
+          </div>
+        </div>
+        `} />
+
+        <div class="bg-blue-500 text-white relative rounded-out-l-2xl mt-4 -mx-8">
+          <div class="p-4 bg-inherit rounded-out-r-2xl">
+            Attached to the sides!<br />
+            <small>This could be useful for cut-out blockquotes or other UI elements</small>
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- Top Variants -->
+      <section class="bg-white p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Top Variants</h2>
+        <div class="space-y-6">
+          <div class="bg-emerald-400 text-emerald-900 p-4 relative rounded-out-t-sm font-mono">rounded-out-t-sm</div>
+          <div class="bg-emerald-400 text-emerald-900 p-4 relative rounded-out-t-md font-mono">rounded-out-t-md</div>
+          <div class="bg-emerald-400 text-emerald-900 p-4 relative rounded-out-t-lg font-mono">rounded-out-t-lg</div>
+          <div class="bg-emerald-400 text-emerald-900 p-4 relative rounded-out-t-xl font-mono">rounded-out-t-xl</div>
+          <div class="bg-emerald-400 text-emerald-900 p-4 relative rounded-out-t-2xl font-mono">rounded-out-t-2xl</div>
+          <div class="bg-emerald-400 text-emerald-900 p-4 relative rounded-out-t-3xl font-mono">rounded-out-t-3xl</div>
+        </div>
+      </section>
+
+      <!-- Bottom Variants -->
+      <section class="bg-white p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Bottom Variants</h2>
+        <div class="space-y-6">
+          <div class="bg-rose-700 text-rose-50 p-4 relative rounded-out-b-sm font-mono">rounded-out-b-sm</div>
+          <div class="bg-rose-700 text-rose-50 p-4 relative rounded-out-b-md font-mono">rounded-out-b-md</div>
+          <div class="bg-rose-700 text-rose-50 p-4 relative rounded-out-b-lg font-mono">rounded-out-b-lg</div>
+          <div class="bg-rose-700 text-rose-50 p-4 relative rounded-out-b-xl font-mono">rounded-out-b-xl</div>
+          <div class="bg-rose-700 text-rose-50 p-4 relative rounded-out-b-2xl font-mono">rounded-out-b-2xl</div>
+          <div class="bg-rose-700 text-rose-50 p-4 relative rounded-out-b-3xl font-mono">rounded-out-b-3xl</div>
+        </div>
+      </section>
+
+      <!-- Left Variants -->
+      <section class="bg-white p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Left Variants</h2>
+        <div class="space-y-6">
+          <div class="bg-amber-400 text-amber-900 p-4 relative rounded-out-l-sm font-mono">rounded-out-l-sm</div>
+          <div class="bg-amber-400 text-amber-900 p-4 relative rounded-out-l-md font-mono">rounded-out-l-md</div>
+          <div class="bg-amber-400 text-amber-900 p-4 relative rounded-out-l-lg font-mono">rounded-out-l-lg</div>
+          <div class="bg-amber-400 text-amber-900 p-4 relative rounded-out-l-xl font-mono">rounded-out-l-xl</div>
+          <div class="bg-amber-400 text-amber-900 p-4 relative rounded-out-l-2xl font-mono">rounded-out-l-2xl</div>
+          <div class="bg-amber-400 text-amber-900 p-4 relative rounded-out-l-3xl font-mono">rounded-out-l-3xl</div>
+        </div>
+      </section>
+
+      <!-- Right Variants -->
+      <section class="bg-white p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Right Variants</h2>
+        <div class="space-y-6">
+          <div class="bg-violet-500 text-violet-50 p-4 relative rounded-out-r-sm font-mono">rounded-out-r-sm</div>
+          <div class="bg-violet-500 text-violet-50 p-4 relative rounded-out-r-md font-mono">rounded-out-r-md</div>
+          <div class="bg-violet-500 text-violet-50 p-4 relative rounded-out-r-lg font-mono">rounded-out-r-lg</div>
+          <div class="bg-violet-500 text-violet-50 p-4 relative rounded-out-r-xl font-mono">rounded-out-r-xl</div>
+          <div class="bg-violet-500 text-violet-50 p-4 relative rounded-out-r-2xl font-mono">rounded-out-r-2xl</div>
+          <div class="bg-violet-500 text-violet-50 p-4 relative rounded-out-r-3xl font-mono">rounded-out-r-3xl</div>
+        </div>
+      </section>
+
+      <!-- Corner Variants -->
+      <section class="bg-white p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Corner Variants</h2>
+        <div class="space-y-6">
+          <!-- Top Corners -->
+          <div class="bg-indigo-500 text-white p-4 relative rounded-out-tl-sm font-mono">rounded-out-tl-sm</div>
+          <div class="bg-indigo-500 text-white p-4 relative rounded-out-tr-md font-mono">rounded-out-tr-md</div>
+
+          <!-- Bottom Corners -->
+          <div class="bg-pink-500 text-white p-4 relative rounded-out-bl-lg font-mono">rounded-out-bl-lg</div>
+          <div class="bg-pink-500 text-white p-4 relative rounded-out-br-xl font-mono">rounded-out-br-xl</div>
+
+          <!-- Left Corners -->
+          <div class="bg-cyan-500 text-white p-4 relative rounded-out-lt-2xl font-mono">rounded-out-lt-2xl</div>
+          <div class="bg-cyan-500 text-white p-4 relative rounded-out-lb-3xl font-mono">rounded-out-lb-3xl</div>
+
+          <!-- Right Corners -->
+          <div class="bg-teal-500 text-white p-4 relative rounded-out-rt-xl font-mono">rounded-out-rt-xl</div>
+          <div class="bg-teal-500 text-white p-4 relative rounded-out-rb-2xl font-mono">rounded-out-rb-2xl</div>
+        </div>
+      </section>
+
+      <!-- Combined Examples -->
+      <section class="bg-white p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Combined Examples</h2>
+        <div class="space-y-6">
+          <div class="bg-orange-500 text-white p-4 relative rounded-out-t-xl rounded-out-b-sm font-mono">
+            rounded-out-t-xl rounded-out-b-sm
+          </div>
+          <div class="bg-orange-500 text-white p-4 relative rounded-out-l-2xl rounded-out-r-md font-mono">
+            rounded-out-l-2xl rounded-out-r-md
+          </div>
+          <div class="bg-orange-500 text-white p-4 relative rounded-out-tl-3xl rounded-out-br-lg font-mono">
+            rounded-out-tl-3xl rounded-out-br-lg
+          </div>
+        </div>
+      </section>
+
+      <!-- Arbitrary Examples -->
+      <section class="bg-white p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Arbitrary Examples</h2>
+        <div class="space-y-6">
+          <div class="bg-blue-500 text-white p-4 relative rounded-out-[23px] font-mono">rounded-out-[23px]</div>
+          <div class="bg-blue-500 text-white p-4 relative rounded-out-t-[29px] font-mono">rounded-out-t-[29px]</div>
+          <div class="bg-blue-500 text-white p-4 relative rounded-out-lt-[1em] rounded-out-rb-[1em] font-mono">
+            rounded-out-lt-[1em] rounded-out-rb-[1em]
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <h1 class="text-4xl font-bold px-4 lg:px-0">Demonstrating the masking effect</h1>
+
+      <p class="px-4 lg:px-0">
+        Here the demos show a complex background which demonstrates that the corners are not
+        using a fake solid color background, but rather a mask which cuts out the corners. So you may use any
+        background you want behind the element!
+      </p>
+
+      <!-- Mesh Gradient Examples -->
+      <section class="mesh-1 p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Mesh Gradient Examples - Light 1</h2>
+        <div class="space-y-6">
+          <div class="bg-blue-900 text-white p-4 relative rounded-out-3xl font-mono">rounded-out-3xl</div>
+          <div class="bg-indigo-900 text-white p-4 relative rounded-out-t-2xl font-mono">rounded-out-t-2xl</div>
+        </div>
+      </section>
+
+      <section class="mesh-dark-1 p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8 text-white">Mesh Gradient Examples - Dark 1</h2>
+        <div class="space-y-6">
+          <div class="bg-emerald-300 text-gray-900 p-4 relative rounded-out-b-3xl font-mono">rounded-out-b-3xl</div>
+          <div class="bg-teal-300 text-gray-900 p-4 relative rounded-out-t-2xl rounded-out-b-xl font-mono">
+            rounded-out-t-2xl rounded-out-b-xl
+          </div>
+        </div>
+      </section>
+
+      <section class="mesh-2 p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Mesh Gradient Examples - Light 2</h2>
+        <div class="space-y-6">
+          <div class="bg-purple-900 text-white p-4 relative rounded-out-l-3xl font-mono">rounded-out-l-3xl</div>
+          <div class="bg-violet-900 text-white p-4 relative rounded-out-r-2xl font-mono">rounded-out-r-2xl</div>
+        </div>
+      </section>
+
+      <section class="mesh-dark-2 p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8 text-white">Mesh Gradient Examples - Dark 2</h2>
+        <div class="space-y-6">
+          <div class="bg-amber-300 text-gray-900 p-4 relative rounded-out-tl-3xl rounded-out-br-3xl font-mono">
+            rounded-out-tl-3xl rounded-out-br-3xl
+          </div>
+          <div class="bg-yellow-300 text-gray-900 p-4 relative rounded-out-tr-2xl rounded-out-bl-2xl font-mono">
+            rounded-out-tr-2xl rounded-out-bl-2xl
+          </div>
+        </div>
+      </section>
+
+      <section class="mesh-3 p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Mesh Gradient Examples - Light 3</h2>
+        <div class="space-y-6">
+          <div class="bg-rose-900 text-white p-4 relative rounded-out-lt-3xl rounded-out-rb-3xl font-mono">
+            rounded-out-lt-3xl rounded-out-rb-3xl
+          </div>
+          <div class="bg-pink-900 text-white p-4 relative rounded-out-rt-2xl rounded-out-lb-2xl font-mono">
+            rounded-out-rt-2xl rounded-out-lb-2xl
+          </div>
+        </div>
+      </section>
+
+      <section class="mesh-dark-3 p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8 text-white">Mesh Gradient Examples - Dark 3</h2>
+        <div class="space-y-6">
+          <div class="bg-lime-300 text-gray-900 p-4 relative rounded-out-t-3xl rounded-out-b-sm font-mono">
+            rounded-out-t-3xl rounded-out-b-sm
+          </div>
+          <div class="bg-green-300 text-gray-900 p-4 relative rounded-out-l-2xl rounded-out-r-lg font-mono">
+            rounded-out-l-2xl rounded-out-r-lg
+          </div>
+        </div>
+      </section>
+
+      <section class="mesh-4 p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Creative Combinations</h2>
+        <div class="space-y-12">
+          <div class="bg-violet-700 text-white relative rounded-out-tl-4xl rounded-out-lb-4xl">
+            <div class="bg-inherit p-4 rounded-out-rt-4xl rounded-out-br-4xl">
+              <h3 class="text-lg font-semibold mb-3 text-shadow-sm">Mixed Corners</h3>
+              <Code lang="html" code={`<div class="bg-violet-700 relative rounded-out-tl-4xl rounded-out-lb-4xl">
+  <div class="bg-inherit rounded-out-rt-4xl rounded-out-br-4xl">
+    Shuriken!
+  </div>
+</div>`} />
+            </div>
+          </div>
+
+          <p><strong>Note:</strong> When nesting corners of different shapes, like above, the ordering of the classes
+            becomes more important. As some of the corners will try to re-use the <code>:before</code> or <code>:after</code>
+            pseudo-elements</p>
+
+          <p>So it may be simpler to use 4 nested divs as shown below.</p>
+
+          <div class="bg-sky-500 text-white relative rounded-out-tl-[100px]">
+            <div class="bg-inherit rounded-out-lb-[50px]">
+              <div class="bg-inherit rounded-out-rt-[80px]">
+                <div class="bg-inherit p-4 rounded-out-br-[30px]">
+                  <h3 class="text-lg font-semibold mb-3 text-shadow-sm">Different Sizes</h3>
+                  <Code lang="html" code={`<div class="bg-sky-500 relative rounded-out-tl-[100px]">
+  <div class="bg-inherit rounded-out-lb-[50px]">
+    <div class="bg-inherit rounded-out-rt-[80px]">
+      <div class="bg-inherit p-4 rounded-out-br-[30px]">
+        Crazy town!
+      </div>
+    </div>
+  </div>
+</div>`} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="w-full mx-auto mt-8">
+        <h2 class="text-3xl font-bold mx-4 lg:mx-0">Practical Example</h2>
+        <p class="mx-4 lg:mx-0 mb-8">Here's a practical example of how you can use the corners to create a tab-like navigation.</p>
+
+        <div class="bg-slate-700 text-white p-8 pb-0 pl-10 rounded-t-lg shadow">
+          <h2 id="tab-like-navigation" class="text-2xl font-bold mb-8">Tab-like Navigation</h2>
+          <nav role="tablist" aria-labelledby="tab-like-navigation" class="flex gap-px text-slate-600">
+            <button
+              role="tab"
+              type="button"
+              aria-selected="false"
+              tabindex="-1"
+              class="tab-button relative rounded-out-b-xl px-4 py-2 rounded-t-xl"
+            >
+              Tab 1
+            </button>
+            <button
+              role="tab"
+              type="button"
+              aria-selected="true"
+              class="tab-button relative rounded-out-b-xl px-4 py-2 rounded-t-xl"
+            >
+              Tab 2
+            </button>
+            <button
+              role="tab"
+              type="button"
+              aria-selected="false"
+              tabindex="-1"
+              class="tab-button relative rounded-out-b-xl px-4 py-2 rounded-t-xl"
+            >
+              Tab 3
+            </button>
+            <button
+              role="tab"
+              type="button"
+              aria-selected="false"
+              tabindex="-1"
+              class="tab-button relative rounded-out-b-xl px-4 py-2 rounded-t-xl"
+            >
+              Tab 4
+            </button>
+          </nav>
+        </div>
+
+        <div class="tab-content-wrapper bg-blue-500 rounded-b-lg shadow p-8 text-slate-50">
+          <div role="tabpanel" class="tab-panel">
+            <p>This is the content for the first tab. It's currently active.</p>
+          </div>
+          <div role="tabpanel" class="tab-panel hidden">
+            <p>This is the second tab's content. Pretty cool, huh?</p>
+          </div>
+          <div role="tabpanel" class="tab-panel hidden">
+            <p>And here is the content for the third tab. Amazing!</p>
+          </div>
+          <div role="tabpanel" class="tab-panel hidden">
+            <p>Wow, this is a lot of tabs!</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white p-8 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-8">Card with Mixed Gradient Corners</h2>
+        <div
+          class="relative min-h-[200px] rounded-out-tl-2xl rounded-out-br-2xl bg-gradient-to-br from-blue-500 to-purple-500 p-8 rounded-tr-xl rounded-bl-xl before:bg-blue-500 before:bg-none after:bg-purple-500 after:bg-none font-mono"
+        >
+          rounded-out-tl-xl rounded-out-br-xl
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<script defer>
+  const tabContainer = document.querySelector('[role="tablist"]');
+  const tabButtons = tabContainer ? Array.from(tabContainer.querySelectorAll(".tab-button")) : [];
+  const tabPanels = tabContainer ? Array.from(document.querySelectorAll(".tab-panel")) : [];
+
+  const activeClasses = ["bg-blue-500", "z-10", "text-slate-50"];
+  const inactiveClasses = [
+    "bg-blue-300",
+    "text-slate-600",
+    "transition-colors",
+    "duration-150",
+    "ease-in-out",
+    "hover:bg-blue-400",
+    "focus:outline-none",
+    "focus:bg-blue-500",
+    "focus:text-slate-50",
+    "focus:z-10",
+    "hover:z-10",
+  ];
+
+  function styleTabs() {
+    tabButtons.forEach((button) => {
+      if (button.getAttribute("aria-selected") === "true") {
+        button.classList.remove(...inactiveClasses);
+        button.classList.add(...activeClasses);
+      } else {
+        button.classList.remove(...activeClasses);
+        button.classList.add(...inactiveClasses);
+      }
+    });
+  }
+
+  if (tabContainer) {
+    tabContainer.addEventListener("click", (e) => {
+      const clickedTab = e.target.closest(".tab-button");
+      if (!clickedTab) return;
+
+      const clickedTabIndex = tabButtons.indexOf(clickedTab);
+
+      // Deactivate all tabs and hide all panels
+      tabButtons.forEach((button, index) => {
+        button.setAttribute("aria-selected", "false");
+        button.setAttribute("tabindex", "-1");
+        if (tabPanels[index]) tabPanels[index].classList.add("hidden");
+      });
+
+      // Activate clicked tab and show its panel
+      clickedTab.setAttribute("aria-selected", "true");
+      clickedTab.setAttribute("tabindex", "0");
+      if (tabPanels[clickedTabIndex]) tabPanels[clickedTabIndex].classList.remove("hidden");
+
+      styleTabs();
+      clickedTab.focus();
+    });
+
+    // Set initial styles
+    styleTabs();
+  }
+</script>
+
+<style>
+  /* Light Mesh Gradients */
+  .mesh-1 {
+    background-color: #f0f0f0;
+    background-image: radial-gradient(at 47% 33%, hsl(162, 77%, 80%) 0, transparent 59%),
+      radial-gradient(at 82% 65%, hsl(198, 100%, 70%) 0, transparent 55%),
+      radial-gradient(at 20% 80%, hsl(145, 90%, 75%) 0, transparent 45%),
+      radial-gradient(at 60% 10%, hsl(180, 85%, 65%) 0, transparent 50%),
+      radial-gradient(at 10% 20%, hsl(150, 95%, 72%) 0, transparent 40%);
+  }
+  .mesh-2 {
+    background-color: #f0f0f0;
+    background-image: radial-gradient(at 80% 0%, hsl(189, 100%, 75%) 0, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(355, 100%, 70%) 0, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(340, 100%, 75%) 0, transparent 50%),
+      radial-gradient(at 30% 20%, hsl(320, 95%, 72%) 0, transparent 45%),
+      radial-gradient(at 70% 80%, hsl(350, 90%, 70%) 0, transparent 40%);
+  }
+  .mesh-3 {
+    background-color: #f0f0f0;
+    background-image: radial-gradient(at 0% 0%, hsl(253, 100%, 80%) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsl(225, 100%, 75%) 0, transparent 50%),
+      radial-gradient(at 100% 100%, hsl(339, 100%, 70%) 0, transparent 50%),
+      radial-gradient(at 20% 50%, hsl(280, 95%, 75%) 0, transparent 45%),
+      radial-gradient(at 50% 70%, hsl(260, 90%, 72%) 0, transparent 40%);
+  }
+  .mesh-4 {
+    background-color: #f0f0f0;
+    background-image: radial-gradient(at 40% 20%, hsl(28, 100%, 75%) 0, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(189, 100%, 70%) 0, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(355, 100%, 75%) 0, transparent 50%),
+      radial-gradient(at 60% 70%, hsl(40, 95%, 72%) 0, transparent 45%),
+      radial-gradient(at 20% 90%, hsl(15, 90%, 70%) 0, transparent 40%);
+  }
+
+  /* Dark Mesh Gradients */
+  .mesh-dark-1 {
+    background-color: #1a1a1a;
+    background-image: radial-gradient(at 47% 33%, hsl(162, 77%, 40%) 0, transparent 59%),
+      radial-gradient(at 82% 65%, hsl(198, 100%, 38%) 0, transparent 55%),
+      radial-gradient(at 20% 80%, hsl(145, 90%, 35%) 0, transparent 45%),
+      radial-gradient(at 60% 10%, hsl(180, 85%, 42%) 0, transparent 50%),
+      radial-gradient(at 10% 20%, hsl(150, 95%, 38%) 0, transparent 40%);
+  }
+  .mesh-dark-2 {
+    background-color: #1a1a1a;
+    background-image: radial-gradient(at 80% 0%, hsl(189, 100%, 46%) 0, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(355, 100%, 43%) 0, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(340, 100%, 47%) 0, transparent 50%),
+      radial-gradient(at 30% 20%, hsl(320, 95%, 42%) 0, transparent 45%),
+      radial-gradient(at 70% 80%, hsl(350, 90%, 45%) 0, transparent 40%);
+  }
+  .mesh-dark-3 {
+    background-color: #1a1a1a;
+    background-image: radial-gradient(at 0% 0%, hsl(253, 100%, 43%) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsl(225, 100%, 43%) 0, transparent 50%),
+      radial-gradient(at 100% 100%, hsl(339, 100%, 43%) 0, transparent 50%),
+      radial-gradient(at 20% 50%, hsl(280, 95%, 40%) 0, transparent 45%),
+      radial-gradient(at 50% 70%, hsl(260, 90%, 42%) 0, transparent 40%);
+  }
+  .mesh-dark-4 {
+    background-color: #1a1a1a;
+    background-image: radial-gradient(at 40% 20%, hsl(28, 100%, 43%) 0, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(189, 100%, 43%) 0, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(355, 100%, 43%) 0, transparent 50%),
+      radial-gradient(at 60% 70%, hsl(40, 95%, 40%) 0, transparent 45%),
+      radial-gradient(at 20% 90%, hsl(15, 90%, 42%) 0, transparent 40%);
+  }
+</style>
