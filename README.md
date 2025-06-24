@@ -6,7 +6,7 @@ to work with __TailwindCSS v4__.
 <small>Similar to folder tabs or protruding cards. The plugin maintains background color/image inheritance while providing a wide range of customization options.</small>
 
 <div align="center">
-  <img src="docs/images/readme-example.png" alt="Demo of the plugin">
+  <img src="public/images/readme-example.png" alt="Demo of the plugin">
 </div>
 
 ## Features
@@ -112,7 +112,7 @@ This plugin uses CSS `::before` and `::after` pseudo-elements to create the roun
 ```
 
 #### Produces;
-<img src="docs/images/tab-like-nav.png" alt="Tab-like navigation">
+<img src="public/images/tab-like-nav.png" alt="Tab-like navigation">
 
 ### Card with Diagonal Gradient Corners
 
@@ -123,7 +123,7 @@ This plugin uses CSS `::before` and `::after` pseudo-elements to create the roun
 ```
 
 #### Produces;
-<img src="docs/images/mixed-corners.png" alt="Card with diagonal gradient corners">
+<img src="public/images/mixed-corners.png" alt="Card with diagonal gradient corners">
 
 ## Troubleshooting
 
@@ -153,7 +153,7 @@ MIT License - See [LICENSE](LICENSE) file for details
 Visit the [demo page](https://simeydotme.github.io/tailwind-rounded-out) for more examples.
 
 #### Backgrounds are able to show through, no fake backgrounds.
-<img src="docs/images/readme-example2.png" alt="Demo of the plugin">
+<img src="public/images/readme-example2.png" alt="Demo of the plugin">
 
 #### A range of corner variations
-<img src="docs/images/readme-example3.png" alt="Demo of the plugin">
+<img src="public/images/readme-example3.png" alt="Demo of the plugin">
