@@ -34,22 +34,13 @@ jobs:
             # node-version: 22 # The specific version of Node that should be used to build your site. Defaults to 22. (optional)
             # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
             
-  # Single deploy job since we're just deploying
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload demo folder
-          path: 'demo'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
